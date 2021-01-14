@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- My custom CSS -->
     <link rel="stylesheet" href="css/site.css">
+    <link rel="stylesheet" href="css/prism.css"
 </head>
   <body>
 
@@ -29,10 +30,10 @@
                     <a class="nav-link" href="code.html">Code</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="source.html">Source</a>
+                    <a class="nav-link" target="_blank" href="https://github.com/DavidRossBergerson/Sumofallfears">Source</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="portfolio.html">Portfolio</a>
+                    <a class="nav-link" target="_blank" href="https://david-bergerson-portfolio.netlify.app/">Portfolio</a>
                 </li>
             </ul>
         </div>
@@ -41,16 +42,91 @@
         <div class="container hero">
             <div>
             <h1 class="display-3">Sum Of All Fears</h1>
-            <p class="lead">JS Arrays</p>
+            <p class="lead">JavaScript</p>
             <hr class="my-2">
-            <p>More info</p>
-            <p class="lead">
-                <a class="btn btn-primary btn-lg" href="solve.html" role="button">See it in Action</a>
-            </p>
             </div>
         </div>
     </header>
 
+</div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+             
+  <pre class ="line-numbers"><code class="language-javascript">
+
+    document.getElementById("btnSubmit").addEventListener("click", Answer);
+
+    function sumOfAllFears(userArray,numk){
+        
+        
+        let found = false;
+        
+        for (let i = 0; i <= userArray.length - 2; i++) {
+            
+            for (let y = (i + 1); y <= userArray.length - 1; y++) {
+                if (numk == userArray[i] + userArray[y]) {
+                    found = true;
+                    return found;
+                           
+                }
+            }
+        }
+        
+        
+       return found; 
+       
+    }
+    
+    function Answer() {
+        let numk = parseInt(document.getElementById("inputk").value);
+    
+        
+    
+        let num1 = parseInt(document.getElementById("input1").value);
+        let num2 = parseInt(document.getElementById("input2").value);
+        let num3 = parseInt(document.getElementById("input3").value);
+        let num4 = parseInt(document.getElementById("input4").value);
+    
+        let userArray = [];
+    
+        let output1 = document.getElementById("results");
+        let output2 = document.getElementById("results2");
+    
+        userArray.push(num1,num2,num3,num4);
+    
+        output1.innerHTML = userArray;
+        let found = sumOfAllFears(userArray,numk);
+        output2.innerHTML = found; 
+    }
+        document.getElementById("btnClear").addEventListener("click", function(){
+        document.getElementById("results").innerText = " ";
+        document.getElementById("results2").innerText = " ";
+        
+    });
+        </code>
+    </pre>
+
+    </div>
+</div>
+</div>
+    
+    
+    
+    
+    
+    
+    
+
+
+
+
+
+
+
+     
 
 
 
@@ -64,5 +140,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="js/site.js"></script>
+    <script src="js/prism.js"></script>
   </body>
 </html>
