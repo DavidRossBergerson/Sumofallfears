@@ -42,12 +42,15 @@ function Answer() {
     output1.innerHTML = userArray;
     let found = sumOfAllFears(userArray,numk);
     output2.innerHTML = found; 
+
 }
     document.getElementById("btnClear").addEventListener("click", function(){
     document.getElementById("results").innerText = " ";
     document.getElementById("results2").innerText = " ";
-    
+   
 });
+
+
 
 
 
