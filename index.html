@@ -23,9 +23,6 @@
                     <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="solve.html">Solve</a>
-                </li>
-                <li class="nav-item">
                     <a class="nav-link" href="code.html">Code</a>
                 </li>
                 <li class="nav-item">
@@ -42,19 +39,58 @@
         <div class="container hero">
             <div>
             <h1 class="display-3">Sum Of All Fears</h1>
-            <h2>The sum of all fears is simple. Pick a number(K), and four more numbers. I will tell you if any two of those numbers added together equal the first number.</h2>
+            <h2>The sum of all fears is simple. Pick a number(K), and four more numbers. 
+                I will tell you if any two of those numbers added together equal the first number.
+                Try the numbers already there, or put in your own.</h2>
             <hr class="my-2">
-            
-            <p class="lead">
-                <a class="btn btn-primary btn-lg" href="solve.html" role="button">See it in Action</a>
-            </p>
+            <h3>Give it a go!</h3>
+         
             </div>
         </div>
     </header>
     
-    <div class="container-fluid ">
-
-    </div>
+    <main class="container pt-3">
+        <div class="row">
+            <div class="col-md">
+               <div class="card">
+               <div class="card-body">
+               <label for="inputk">Enter Number for K</label>
+               <input id="inputk" type="number" value="17">
+            </div>
+            <div class="card-footer">
+               <button id="btnClear" class="btn btn-primary">Clear</button>
+               <button class="btn btn-primary " id="btnSubmit" role="button">See it in Action</button>
+               </div>
+               
+            </div>
+            </div>
+               <div class="col-md" >
+               <label for="input1">Enter Number</label>
+               <input id="input1" type="number" value="10">
+               <br>
+               <label for="input2">Enter Number</label>
+               <input id="input2" type="number" value="15">
+               <br>
+               <label for="input3">Enter Number</label>
+               <input id="input3" type="number" value="7">
+               <br>
+               <label for="input4">Enter Number</label>
+               <input id="input4" type="number" value="3"> 
+            </div>
+            
+            <div class="col-md">
+                <div class="card">
+                    
+                <h3>Your Numbers.</h3>
+                <h2 id ="results"></h2>
+                <br>
+                <h3>The Answer Is...</h3>
+                <h1 id="results2" class="text-uppercase"></h1>
+            </div>
+        </div>
+        </div>
+    </main>
+   
       
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
